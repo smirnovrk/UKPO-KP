@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+    <script type="text/javascript" th:src="@{../js/angular-1.7.5.min.js}"></script>
+    <script type="text/javascript" th:src="@{../js/tasks.js}"></script>
+
+    <title>New task</title>
+
+</head>
+<body ng-app="tasks" ng-controller="TasksController1">
+<form id="pform" align="center" ng-submit="addTask()">
+    <p></p>
+    <label for="title">Title: </label>
+    <input id="title" name="title" ng-model="title" type="text"/><br>
+    <label for="description">Description: </label>
+    <input id="description" name="description" ng-model="description" type="text"/><br>
+    <input type="submit" value="Add task!">
+
+</form>
+<div ng-controller="getTasks" ng-show="tasksList.length > 0">
+    <table id="tasksTable" class="table table-hover">
+        <thead>
+        <tr>
+            <th><h2>Title</h2></th>
+            <th><h2>Description</h2></th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="tasks in tasksList" id="{{tasks.id}}">
+            <td>{{tasks.title}}</td>
+            <td>{{tasks.description}}</td>
+            <td><!--<input type="button" value="Редактировать"/>--></td>
+            <!--<td><input type="button" value="Удалить" ng-click="deleteSchool(school.id)"/></td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

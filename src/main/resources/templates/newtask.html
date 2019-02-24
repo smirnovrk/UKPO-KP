@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+
+    <script src ="../static/js/angular-1.7.5.min.js"> </script>
+    <script src="../static/js/tasks.js"></script>
+
+    <title>New task</title>
+
+</head>
+<body>
+<form id="pform" action="/task/add/done" method="post" align = "center">
+    <p></p>
+    <label for="title">Title: </label>
+    <input id="title" name="title" type="text"/><br>
+    <label for="description">Description: </label>
+    <input id="description" name="description" type="text"/><br>
+    <input type="submit" value="Add task!">
+</form>
+</body>
+</html>

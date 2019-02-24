@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="com.yellow.photoshare.main" target="1.8" />
+      <module name="com.yellow.photoshare.test" target="1.8" />
+      <module name="photoshare_main" target="1.8" />
+      <module name="photoshare_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
